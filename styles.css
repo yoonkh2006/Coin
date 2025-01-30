@@ -1,0 +1,103 @@
+@font-face {
+  font-family: 'DungGeunMo';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'DungGeunMo';
+  background-color: #f5f5dc;
+  color: #2f301d;
+  user-select: none;
+}
+
+#container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  align-items: center;
+}
+
+#title {
+  font-size: 7vmax;
+  border: 0.5vmax dashed #2f301d;
+  width: 30vmax;
+  text-align: center;
+}
+
+#cost {
+  display: flex;
+  white-space: pre-wrap;
+  justify-content: center;
+  text-align: center;
+  align-items: end;
+  font-size: 5vmax;
+  height: 12vmax;
+  width : 30vmax;
+  box-shadow : 0px 0.3vmax 0px 0px;
+}
+
+#notice {
+  height: 5vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#time_remain {
+  font-size: 2vmax;
+}
+
+#coin_time {
+  font-size: 2vmax;
+}
+
+button {
+  height: 5vmax;
+  width: 10vmax;
+  font-size: 3vmax;
+  border: none;
+  background-color: #c2d2bd;
+  color: #2f301d;
+  cursor: pointer;
+  border: 0.2vmax solid #2f301d;
+  border-radius: 0.5vmax;
+  transition-duration: 0.1s;
+}
+
+button:active {
+  filter: brightness(0.7)
+}
+
+#buttons {
+  display: flex;
+  width: 30vmax;
+  justify-content: space-between;
+}
+
+#buy {
+  font-family: 'DungGeunMo';
+}
+
+#sell {
+  font-family: 'DungGeunMo';
+}
+
+#info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2vmax;
+}
+
+#warn {
+  color : red;
+  height : 2vmax;
+}
