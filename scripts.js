@@ -24,9 +24,10 @@ let rapidSellingTimeout;
 function randomCost() { //변동 폭 함수
   let plus_minus = [1, -1]; //증감
   let perc = Math.random(); //0~100% 사이의 배율
-  let showPerc = Math.floor(perc * 100); //표시용 퍼센트
+  let showPerc = Math.floor(perc * 10000) / 100; //표시용 퍼센트
   let plusOrMinus = Math.floor(Math.random() * 2); //randint(0,1)
   showPerc = String(showPerc) + "%";
+  displayPerc.style.visibility = "visible"; //시작하자마자 퍼센트 보이게
 
   perc = perc * plus_minus[plusOrMinus] + 1; //증감 결정, 마이너스 배율을 플러스 배율만큼 변화(10%감소 = 90%변화)
   cost *= perc //가격 변동
@@ -43,6 +44,11 @@ function randomCost() { //변동 폭 함수
   if (plus_minus[plusOrMinus] === 1) {
     displayPerc.style.color = "red";
     displayPerc.textContent = `▲${showPerc}`;
+    showMaxCoin.textContent = `최대 매수 가능 수량 : ${max_coin}`;
+  }
+  else if (showPerc == "0%") {
+    displayPerc.style.color = "gray";
+    displayPerc.textContent = `${showPerc}`;
     showMaxCoin.textContent = `최대 매수 가능 수량 : ${max_coin}`;
   }
   else {
@@ -122,11 +128,11 @@ function updateTimer() {    //타이머
   if (end_time <= 0) {   //게임종료
     clearInterval(timerInterval);
     clearInterval(coinPriceInterval);
-    clearInterval(coinPriceInterval);
 
     buy.style.display = "none";
     sell.style.display = "none";
     retry.style.display = "block";
+    displayPerc.style.visibility = "hidden";
     showCost.style.fontSize = "3vmax";
     showCost.textContent = `게임 종료!\n모은 돈 : ${money}`;
   }
