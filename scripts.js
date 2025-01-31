@@ -46,11 +46,6 @@ function randomCost() { //변동 폭 함수
     displayPerc.textContent = `▲${showPerc}`;
     showMaxCoin.textContent = `최대 매수 가능 수량 : ${max_coin}`;
   }
-  else if (showPerc == "0%") {
-    displayPerc.style.color = "gray";
-    displayPerc.textContent = `${showPerc}`;
-    showMaxCoin.textContent = `최대 매수 가능 수량 : ${max_coin}`;
-  }
   else {
     displayPerc.style.color = "blue";
     displayPerc.textContent = `▼${showPerc}`;
