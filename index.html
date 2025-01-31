@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
   <title>비트코인</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
   <link rel="stylesheet" href="styles.css">
@@ -12,7 +13,10 @@
 <body>
   <div id="container">
     <div id="title">코인샵</div>
-    <div id="cost"></div>
+    <div id="costinfo">
+      <div id="displayPerc"></div>
+      <div id="cost"></div>
+    </div>
     <div id="notice">
       <div id="time_remain">게임 종료까지 초</div>
       <div id="coin_time">코인 시세 변동까지 초</div>
@@ -20,6 +24,7 @@
     <div id="buttons">
       <button id="buy">매수</button>
       <button id="sell">매도</button>
+      <button id="retry">다시</button>
     </div>
     <div id="info">
       <div id="money">소지금 : 10000</div>
